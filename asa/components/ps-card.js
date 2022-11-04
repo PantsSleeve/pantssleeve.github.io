@@ -64,6 +64,23 @@ class PsCard extends HTMLElement {
             width: 100%;
           }
         }
+
+        @media (prefers-color-scheme: dark) {
+          .card {
+            background-color: var(--dark-input); 
+            border-color: var(--top);
+            color: var(--top);
+            transition: background-color, border-color, color .5s ease-in-out;
+          }
+          .body {
+            background-color: rgba(0,0,0,0.75); 
+            transition: background-color .5s ease-in-out;
+          }
+          ::slotted(h3) {
+            background-color: rgba(0,0,0,0.75); 
+            transition: background-color .5s ease-in-out;
+          }
+        }
       </style>
       <div class="card">
         <slot name="title"></slot>

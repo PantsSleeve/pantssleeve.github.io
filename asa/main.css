@@ -1,6 +1,6 @@
 
 :root {
-  --top: #d6f1ec;
+  --top: #eeeeee;
   --bottom: #ffccc8;
   --dark: rgb(116, 116, 116);
   --light: #fff;
@@ -8,6 +8,10 @@
   --space-s: 8px;
   --space-m: 16px;
   --bar-height: 56px;
+
+  --dark-back: #404258;
+  --dark-card-back: #474E68;
+  --dark-input: #6B728E;
 }
 
 /**/
@@ -26,9 +30,15 @@ h1, h2, h3 {
   padding: 0;
 }
 
+h1 {
+  text-align: center;
+}
+
 input[type=text] {
   height: 30px;
   width: 250px;
+  border-radius: 8px;
+  border: 1px solid var(--dark-back);
 }
 
 .filters {
@@ -36,8 +46,16 @@ input[type=text] {
   flex-wrap: wrap;
 }
 
+#navigation {
+  max-width: 230px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 16px;
+}
+
 #content-container {
-  margin: 16px;
+  margin-left: 246px;
 }
 
 #content {
@@ -50,5 +68,25 @@ input[type=text] {
 @media only screen and (max-width: 600px) {
   #content {
     display: block;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark-back); 
+    color: var(--top);
+    transition: background-color, color .5s ease-in-out;
+  }
+
+  input[type=text] {
+    background-color: var(--dark-input); 
+    border-color: var(--top);
+    color: var(--top);
+    transition: background-color, border-color, color .5s ease-in-out;
+  }
+
+  .card {
+    background-color: var(--dark-card-back); 
+    transition: background-color .5s ease-in-out;
   }
 }
