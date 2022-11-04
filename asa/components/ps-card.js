@@ -24,7 +24,7 @@ class PsCard extends HTMLElement {
           padding: 0;
           color: var(--dark);
           background: #fff;
-          height: 520px;
+          height: 530px;
           width: 320px;
           position: relative;
         }
@@ -36,7 +36,7 @@ class PsCard extends HTMLElement {
           right: 0;
           background: rgba(255,255,255,0.75);
           font-size: 14px;
-          height: 160px;
+          height: 170px;
         }
         ::slotted(h3) {
           margin: 0!important;

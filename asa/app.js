@@ -20,7 +20,7 @@ filterText.onkeyup = (e) => {
 
 const maxCardsToShow = 100;
 const updateCards = (filteredShits) => {
-  counter.innerHTML = `${filteredShits ? filteredShits.length : totalCount}/${totalCount}`
+  counter.innerHTML = `${filteredShits ? filteredShits.length : totalCount}/${totalCount} (showing first ${maxCardsToShow})`
   let c = document.createElement('div');
   let shits = filteredShits || Object.entries(assets);
   shits = shits.splice(0, maxCardsToShow);
@@ -35,7 +35,10 @@ const updateCards = (filteredShits) => {
     let body = ``;
     for (let prop of Object.entries(value)) {
       if (prop[0] === "Name") { continue };
-      body += `<div>${prop[0]}: ${prop[1]}</div>`
+      body += `<div class="properties">
+      <div class="bold">${prop[0]}:</div>
+      <div>${prop[1]}</div>
+      </div>`
     }
 
     card.innerHTML = `${title}${img}<div slot="body">${body}</div>`;

@@ -1,7 +1,7 @@
 
 :root {
   --top: #eeeeee;
-  --bottom: #ffccc8;
+  --bottom: #d6f1ec;
   --dark: rgb(116, 116, 116);
   --light: #fff;
   --grey: rgb(140, 140, 140);
@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   color: var(--grey);
-  background: var(--top);
+  background: var(--bottom);
 }
 
 h1, h2, h3 {
@@ -55,13 +55,21 @@ input[type=text] {
 }
 
 #content-container {
-  margin-left: 246px;
+  margin-left: 254px;
 }
 
 #content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.properties {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* Small screens */
