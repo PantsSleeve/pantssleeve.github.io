@@ -1,6 +1,6 @@
 import { } from './components/ps-card.js';
-import assets from './data/asa.json' assert { type: 'json' };
-import imgs from './data/svg.json' assert { type: 'json' };
+const assets = await (await fetch("./data/asa.json")).json();
+const imgs = await (await fetch("./data/svg.json")).json();
 
 const content = document.getElementById('content');
 const filterText = document.getElementById('filter');
