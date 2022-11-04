@@ -1,0 +1,54 @@
+
+:root {
+  --top: #d6f1ec;
+  --bottom: #ffccc8;
+  --dark: rgb(116, 116, 116);
+  --light: #fff;
+  --grey: rgb(140, 140, 140);
+  --space-s: 8px;
+  --space-m: 16px;
+  --bar-height: 56px;
+}
+
+/**/
+
+body {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  color: var(--grey);
+  background: var(--top);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+input[type=text] {
+  height: 30px;
+  width: 250px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#content-container {
+  margin: 16px;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  #content {
+    display: block;
+  }
+}
