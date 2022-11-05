@@ -55,9 +55,11 @@ const updateCards = (filteredShits) => {
         🧪 Rarity rank: ${shit.RarityRank}
         </span>
       </div>
-      <a target="_blank" href="https://www.jpg.store/asset/${shit.Asset}" >
-        <img class="icon" src="./imgs/jpg-store.svg" />
-      </a>
+      <div>
+        <a target="_blank" href="https://www.jpg.store/asset/${shit.Asset}" >
+          <img class="icon" src="./imgs/jpg-store.svg" />
+        </a>
+      </div>
     </h3>`;
     let img = `<img slot="img" src="${imgs[shit.Id]}" />`;
 
