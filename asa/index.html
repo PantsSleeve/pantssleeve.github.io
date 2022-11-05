@@ -25,15 +25,32 @@
           <label for="rarity">Order by rarity</label>
         </div>
         <div id="counter"></div>
+        <div>
+          <hr />
+        </div>
+        <div class="wallets">
+          <div class="weak">
+            See <strong>your</strong> ape shit army:
+          </div>
+          <a href="" id="nami">
+            <img class="icon" src="./imgs/nami.svg" />
+          </a>
+        </div>
       </div>
     </div>
     <div id="content">
       <!-- Add asa here -->
-      Loading...
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
     </div>
   </div>
+  <!-- https://docs.strica.io/lib/typhonjs/index.html -->
+  <script type="text/javascript" src="./lib//cbor.js"></script>
   <script type="text/javascript" src="./lib/pako.min.js"></script>
   <script type="module" src="app.js" async></script>
+  <script defer type="module" src="wallet.js" async></script>
 </body>
 
 </html>

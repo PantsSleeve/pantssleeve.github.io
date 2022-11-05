@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "python -m SimpleHTTPServer"
+  },
+  "dependencies": {
+    "@emurgo/cardano-serialization-lib-browser": "^11.1.0"
+  }
+}

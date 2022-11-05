@@ -38,7 +38,6 @@ input[type=text] {
   font-size: 16px;
   padding: var(--space-s);
   height: 24px;
-  width: 100%;
   border-radius: 8px;
   border: 1px solid var(--dark-back);
 }
@@ -46,6 +45,7 @@ input[type=text] {
 .filters {
   display: flex;
   flex-wrap: wrap;
+  flex-flow: column;
 }
 
 #navigation {
@@ -63,6 +63,19 @@ input[type=text] {
 #content {
   display: flex;
   flex-wrap: wrap;
+}
+
+.wallets {
+  margin-top: var(--space-s);
+}
+
+.wallets a {
+  border-radius: var(--space-s);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px;
+  display: inline-block;
+  margin: var(--space-s) var(--space-s) 0 0;
 }
 
 .icon {
@@ -121,5 +134,53 @@ h3 a {
   .card {
     background-color: var(--dark-card-back); 
     transition: background-color .5s ease-in-out;
+  }
+}
+
+/* Loader */
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
   }
 }

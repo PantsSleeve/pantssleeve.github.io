@@ -1,4 +1,5 @@
 import { } from './components/ps-card.js';
+import { getMyShits } from './wallet.js';
 
 const assetsGz = await (await fetch("./data/asa3.json.gz")).arrayBuffer();
 const binData = new Uint8Array(assetsGz);
@@ -14,6 +15,7 @@ let imgs = JSON.parse(pako.ungzip(imgBinData, { 'to': 'string' }));
 const content = document.getElementById('content');
 const filterText = document.getElementById('filter');
 const sortCheck = document.getElementById('rarity');
+
 let sortByRarity = true;
 const counter = document.getElementById('counter');
 const totalCount = 6969;
@@ -26,6 +28,14 @@ const filter = (value) => {
     })
   });
   updateCards(filteredShits);
+}
+
+const nami = document.getElementById('nami');
+nami.onclick = async (e) => {
+  e.preventDefault();
+  if (!await cardano.enable()) { return; }
+  let myShits = await getMyShits(assets);
+  updateCards(myShits);
 }
 
 sortCheck.onchange = (e) => {
