@@ -20,6 +20,10 @@
       <h1>Ape Shit Army</h1>
       <div class="filters">
         <input id="filter" type="text" />
+        <div style="display: none;">
+          <input type="checkbox" id="rarity" name="rarity" checked>
+          <label for="rarity">Order by rarity</label>
+        </div>
         <span id="counter"></span>
       </div>
     </div>
@@ -27,6 +31,7 @@
       <!-- Add asa here -->
     </div>
   </div>
+  <script type="text/javascript" src="./lib/pako.min.js"></script>
   <script type="module" src="app.js" async></script>
 </body>
 
