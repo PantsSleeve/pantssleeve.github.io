@@ -1,6 +1,6 @@
 import { } from './components/ps-card.js';
 
-const assetsGz = await (await fetch("./data/asa2.json.gz")).arrayBuffer();
+const assetsGz = await (await fetch("./data/asa3.json.gz")).arrayBuffer();
 const binData = new Uint8Array(assetsGz);
 let assets = JSON.parse(pako.ungzip(binData, { 'to': 'string' }));
 assets = assets.sort((a, b) => {
@@ -47,10 +47,14 @@ const updateCards = (filteredShits) => {
   let shits = filteredShits || assets;
 
   shits = shits.splice(0, maxCardsToShow);
-  const skipProps = ['Id', 'Name', 'Rarity', 'RarityRank'];
+  const skipProps = ['Id', 'Name', 'Rarity', 'RarityRank', 'Asset'];
   for (let shit of shits) {
     let card = document.createElement('ps-card');
-    let title = `<h3 slot="title">${shit.Name} (${shit.RarityRank})</h3>`;
+    let title = `<h3 slot="title">${shit.Name} (${shit.RarityRank}) 
+      <a href="https://www.jpg.store/asset/${shit.Asset}" >
+        <img class="icon" src="./imgs/jpg-store.svg" />
+      </a>
+    </h3>`;
     let img = `<img slot="img" src="${imgs[shit.Id]}" />`;
 
     let body = ``;

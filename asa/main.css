@@ -63,6 +63,16 @@ input[type=text] {
   flex-wrap: wrap;
 }
 
+.icon {
+  height: 24px;
+  padding: 4px;
+}
+
+h3 a {
+  display: flex;
+  justify-content: center;
+}
+
 .properties {
   display: flex;
   justify-content: space-between;
@@ -74,8 +84,12 @@ input[type=text] {
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
-  #content {
-    display: block;
+  #navigation {
+    position: relative;
+  }
+  
+  #content-container {
+    margin-left: 0;
   }
 }
 

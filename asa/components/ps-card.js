@@ -28,6 +28,7 @@ class PsCard extends HTMLElement {
           width: 320px;
           position: relative;
         }
+
         .body {
           padding: var(--space-s);
           position: absolute;
@@ -38,15 +39,19 @@ class PsCard extends HTMLElement {
           font-size: 14px;
           height: 190px;
         }
+
         ::slotted(h3) {
           margin: 0!important;
-          padding: var(--space-m)!important;
+          padding: 4px var(--space-m)!important;
           font-size: 16px;
           position: absolute;
           top: 0;
           left: 0;
           right: 0;
           background: rgba(255,255,255,0.75);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
 
         ::slotted(img) {
@@ -57,6 +62,7 @@ class PsCard extends HTMLElement {
           border: 1px solid rgba(255,255,255,0.3);
           box-sizing: border-box;
         }
+
         /* Small screens */
         @media only screen and (max-width: 600px) {
           .card {
