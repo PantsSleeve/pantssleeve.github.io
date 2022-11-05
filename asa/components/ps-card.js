@@ -66,8 +66,8 @@ class PsCard extends HTMLElement {
         /* Small screens */
         @media only screen and (max-width: 600px) {
           .card {
-            margin: 0 0 var(--space-s) 0;
-            width: 100%;
+            margin: var(--space-s);
+            width: 240px;
           }
         }
 

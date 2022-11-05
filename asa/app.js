@@ -50,8 +50,12 @@ const updateCards = (filteredShits) => {
   const skipProps = ['Id', 'Name', 'Rarity', 'RarityRank', 'Asset'];
   for (let shit of shits) {
     let card = document.createElement('ps-card');
-    let title = `<h3 slot="title">${shit.Name} (${shit.RarityRank}) 
-      <a href="https://www.jpg.store/asset/${shit.Asset}" >
+    let title = `<h3 slot="title"><div>${shit.Name} <br />
+        <span class="weak">
+        🧪 Rarity rank: ${shit.RarityRank}
+        </span>
+      </div>
+      <a target="_blank" href="https://www.jpg.store/asset/${shit.Asset}" >
         <img class="icon" src="./imgs/jpg-store.svg" />
       </a>
     </h3>`;
