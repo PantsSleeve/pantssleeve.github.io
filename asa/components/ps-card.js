@@ -24,9 +24,10 @@ class PsCard extends HTMLElement {
           padding: 0;
           color: var(--dark);
           background: #fff;
-          height: 550px;
-          width: 320px;
+          height: 444px;
+          width: 280px;
           position: relative;
+          box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
         }
 
         .body {
@@ -36,8 +37,8 @@ class PsCard extends HTMLElement {
           left: 0;
           right: 0;
           background: rgba(255,255,255,0.75);
-          font-size: 14px;
-          height: 190px;
+          font-size: 12px;
+          height: 150px;
         }
 
         ::slotted(h3) {
@@ -55,9 +56,7 @@ class PsCard extends HTMLElement {
         }
 
         ::slotted(img) {
-          box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
           width: 100%;
-          height: 400px;
           object-fit: cover;
           border: 1px solid rgba(255,255,255,0.3);
           box-sizing: border-box;
@@ -67,7 +66,25 @@ class PsCard extends HTMLElement {
         @media only screen and (max-width: 600px) {
           .card {
             margin: var(--space-s);
-            width: 240px;
+            width: 160px;
+            height: 300px;
+          }
+          ::slotted(h3) {
+            font-size: 10px!important;
+          }
+          
+          .body {
+            padding: var(--space-s);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.75);
+            font-size: 8px;
+            height: 100px;
+          }
+          ::slotted(img) {
+            height: 200px;
           }
         }
 

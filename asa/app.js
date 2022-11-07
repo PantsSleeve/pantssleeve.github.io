@@ -20,11 +20,14 @@ let sortByRarity = true;
 const counter = document.getElementById('counter');
 const totalCount = 6969;
 
-const filter = (value) => {
+const filter = (str) => {
   // TODO - tokenize value to do smarter filtering.
   let filteredShits = assets.filter(a => {
-    return Object.values(a).some(p => {
-      return p.toString().toLowerCase().includes(value.toLowerCase());
+    return Object.entries(a).some(p => {
+      let key = p[0].toLowerCase();
+      let value = p[1].toString().toLowerCase();
+      if (['asset', 'rarityrank', 'id'].includes(key)) { return false; }
+      return value.includes(str.toLowerCase());
     })
   });
   updateCards(filteredShits);
