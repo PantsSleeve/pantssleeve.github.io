@@ -1,38 +1,10 @@
-#walletContainer h3 {
-  color: #fff;
-  font-weight: 100!important;
-}
-
-#walletContainer > h3:first-of-type {
-  margin-top: 32px;
-}
-
-#walletContainer > * {
-  margin: 8px;
-}
-
-#walletContainer, #buttons {
-  position: absolute;
-  padding: 32px;
-  /* background: rgba(0,0,0,0.75 ); */
-  z-index: 999;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -100px;
-  flex-direction: column;
-  top: 0;
-  bottom: 0;
-  width: 55%;
-}
-
 #walletBody {
   overflow: scroll;
   width: 100%;
   display: flex;
   height: 84px;
   justify-content: center;
+  align-items:center;
 }
 
 #walletBody img {
@@ -44,16 +16,16 @@
 
 #walletBody img.selected {
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  cursor: pointer;
+  box-shadow: rgb(255 255 255 / 50%) 0px 0px 10px 2px;
 }
+
 
 #walletBody img:hover {
   border: 1px solid rgba(0,0,0,0.5);
   border-radius: 8px;
   width: 80px;
   height: 80px;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
@@ -78,4 +50,27 @@
   height: 96px;
   background: rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	#walletBody img {
+	  width: 32px;
+	  height: 32px;
+	}
+	
+	#walletBody img:hover {
+	  width: 40px;
+	  height: 40px;
+	}
+	
+	#duckSelector img {
+	  width: 39px;
+	  height: 39px;
+	}
+	
+	#duckSelector img:hover {
+	  width: 48px;
+	  height: 48px;
+	}
+
 }
