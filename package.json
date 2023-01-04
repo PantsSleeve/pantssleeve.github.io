@@ -1,0 +1,16 @@
+{
+  "name": "pantssleeve.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pathfind.js",
+  "scripts": {
+    "start": "python3 -m http.server && echo \"http://localhost:8000\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ps:PantsSleeve/pantssleeve.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
