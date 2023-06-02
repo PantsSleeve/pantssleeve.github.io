@@ -1,11 +1,11 @@
 {
-	"name": "memewars",
-	"short_name": "memewars",
+	"name": "MemeWars",
+	"short_name": "MemeWars",
 	"description": "",
 	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "landscape",
-	"background_color": "#ffffff",
+	"background_color": "#000000",
 	"icons": [
 		{
 			"src": "icons/icon-16.png",
