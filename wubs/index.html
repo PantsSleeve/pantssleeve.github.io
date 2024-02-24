@@ -1,38 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Wubs</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta charset="UTF-8">
+	<title>Wubs ⌛️</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+	<style>
+		.delicious-handrawn-regular {
+			font-family: "Delicious Handrawn", cursive;
+			font-weight: 400;
+			font-style: normal;
+		}
 
-<meta name="generator" content="Scirra Construct">
 
-	<link rel="manifest" href="appmanifest.json">
+		body {
+			background-image: url("tiledbackground-sheet0.png");
+			background-repeat: repeat;
+		}
 
+		.container {
+			background-image: url("mapwub-sheet2.png");
+			background-repeat: repeat;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="mystyle.css">
+		.container div {
+			background: rgba(0, 0, 0, 0.75);
+			color: #fff;
+			width: 100%;
+			padding: 32px;
+			text-align: center;
+		}
 
+		h1 {
+			font-size: 64px;
+			margin-bottom: 0px;
+		}
+	</style>
 </head>
-<body>
 
-<script>
-if (location.protocol.substr(0, 4) === "file")
-{
-	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
-}
-</script>
-	<script src="box2d.wasm.js"></script>
-	<noscript>
-		<div id="notSupportedWrap">
-			<h2 id="notSupportedTitle">This content requires JavaScript</h2>
-			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+<body>
+	<div class="container">
+		<div class="delicious-handrawn-regular">
+			<h1>Wubs Alpha has ended</h1>
+			<h2>The real adventure begins soon:ish</h2>
 		</div>
-	</noscript>
-	<script src="scripts/supportcheck.js"></script>
-	<script src="scripts/offlineclient.js" type="module"></script>
-	<script src="scripts/main.js" type="module"></script>
-	<script src="scripts/register-sw.js" type="module"></script>
+	</div>
+
 
 </body>
+
 </html>
